@@ -1,0 +1,64 @@
+list: 
+@article{test,
+  author = {},
+  title = { Thesis - Fully automated foosball table},
+  journal = {Sample Journal},
+  year = {2024},
+  volume = {4}
+}
+
+@article{test,
+  author = {Your Name},
+  title = {\textbf{Thesis - Fully Automated Foosball Table}},
+  journal = {Sample Journal},
+  year = {2024},
+  volume = {4},
+  description = {This thesis presents the design and development of a fully automated foosball table, integrating advanced technologies to enhance gameplay experience. The project explores innovative mechanisms for player control and scoring, aiming to revolutionize traditional foosball.}
+}
+
+
+@article{else:lim.init:2010,
+  title = {
+           \textbf(Another Paper Something Something)},
+  journal = {Journal of Carrying On},
+  volume = {11},
+  author = {Someone, Else and Lim, L. T.},
+  year = {2010}
+}
+
+
+@INPROCEEDINGS{Boon:AM!Weiner:ICEEE2014,
+author={Lim, AM!WeinerLian Tze},
+year={2014},
+booktitle={bbbbbbbbbbbbbbbbbb},
+title={bbbbbbbbbbbbbbbbbbbbbbb},
+address={bbbbbbb},
+pages={39--47},
+url={http://goo.gl/pfdUfm}
+}
+
+@BOOK{Bahari:Lim:2009,
+  title = {Thesis},
+  publisher = {Thesis: AM!Weiner},
+  year = {2020},
+  editor = {aaaaa},
+  address = {aaaaaa},
+  isbn = {978-983-3986-58-3},
+  keywords = {own},
+  owner = {liantzelim},
+  timestamp = {2009.06.27}
+}
+
+%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own
+\makerubrichead{Projects}
+
+\nocite{*}
+
+%% If you just want everything in one list
+% \printbibliography[heading={none}]
+
+\printbibliography[heading={subbibliography},title={Journal Articles},type=article]
+
+\printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings]
+
+\printbibliography[heading={subbibliography},title={Books and Chapters},filter={booksandchapters}]

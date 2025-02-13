@@ -1,0 +1,125 @@
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+\usepackage{etex}
+\reserveinserts{28}
+\usepackage[utf8]{inputenc}
+
+
+
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+% Most commands and style definitions are in settings.sty.
+\usepackage{settings}
+
+% If you need to further customise your biblatex setup e.g. with \DeclareFieldFormat etc please add them here AFTER loading settings.sty. For example, to remove the default "[Online] Available:" prefix before URLs when using the IEEE style:
+\DefineBibliographyStrings{english}{url={\textsc{url}}}
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+
+%% Specify your last name(s) and first name(s) (as given in the .bib) to automatically bold your own name in the publications list. 
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% \mynames{Lim/Lian\bibnamedelima Tze}
+
+%% You can specify multiple names like this, especially if you have changed your name or if you need to highlight multiple authors. See items 6–9 in the example "Journal Articles" output.
+\mynames{Lim/Lian\bibnamedelima Tze,
+  Wong/Lian\bibnamedelima Tze,
+  Lim/Tracy,
+  Lim/L.\bibnamedelimi T.}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec} 
+  %% You can use \setmainfont etc; I'm just using these font packages here because they provide OpenType fonts for use by XeLaTeX/LuaLaTeX anyway
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+  \usepackage{wasysym}
+\fi
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+% \definecolor{SwishLineColour}{HTML}{00FFFF}
+% \definecolor{MarkerColour}{HTML}{0000CC}
+
+% Change the item prefix marker if you want
+% \prefixmarker{$\diamond$}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily Talha Kocaman}
+  
+  \begin{minipage}[t]{0.4\textwidth} % Left side
+    \makefield{\faEnvelope[regular]}{\href{mailto:talha?!?!?@gmail.com}{\texttt{Talhakocaman12@gmail.com}}}
+
+     \makefield{\phone}{\href{tel:+436601270333}{\texttt{+43 660/1270333}}}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.48\textwidth} % Right side
+    \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/talha-kocaman-b83611313/}{\texttt{LINKEDIN}}}
+    
+    \makefield{\faGlobe}{\url{https://github.com/talhako}} 
+  \end{minipage} 
+}
+%
+\rightheader{~}
+\begin{fullonly}
+\photo[r]{photo}
+\photoscale{0.15}
+\end{fullonly}
+%
+\title{Curriculum Vitae}
+%
+\begin{document}
+\makeheaders[c]
+\vspace{-2.5em}
+
+\begin{rubric}{Profile summary}
+\vspace{0.2em}
+\parbox{\textwidth}{
+Electrical Engineering and IT student with hands-on experience at embedded systems, software development, hardware design and RF-technologies.
+Passionate about R\&D, eager to contribute to innovative solutions.
+}
+\end{rubric}
+\vspace{-0.5em}
+\makerubric{employment}
+\vspace{-1.1em}
+\makerubric{education}
+\vspace{-1.1em}
+% \makerubric{projects}
+
+%\begin{rubric}{Projects}
+%\end{rubric}
+%\vspace{-1.8em}
+%\begin{itemize}
+%    \item[\circled{1}] \textbf{ Project Name } (Jahre)
+    
+%    Inhalt von der Project
+    
+%    \item[\circled{2}] \textbf{Thesis project} (jahr)
+    
+%    inhalt
+    
+%\end{itemize}
+%\vspace{-0.9em}
+
+\makerubric{skills}
+\vspace{-0.9em}
+% Bibliography section
+% \printbibliography
+%\makerubric{misc}
+\end{document}
